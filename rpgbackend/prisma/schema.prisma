@@ -7,21 +7,21 @@ datasource db {
 }
 
 model Player {
-  id        Int     @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   name      String
-  class     String  // "Warrior", "Mage", "Rogue"
-  hp        Int     @default(100)
-  attack    Int     @default(10)
-  defense   Int     @default(5)
-  mana      Int     @default(50)
+  class     String
+  hp        Int      @default(100)
+  attack    Int      @default(10)
+  defense   Int      @default(5)
+  mana      Int      @default(50)
   createdAt DateTime @default(now())
 }
 
 model Enemy {
-  id        Int     @id @default(autoincrement())
-  name      String
-  hp        Int
-  attack    Int
-  defense   Int
-  reward    Int     // Experience or gold
+  id      Int    @id @default(autoincrement())
+  name    String
+  hp      Int
+  attack  Int
+  defense Int
+  reward  Int
 }
